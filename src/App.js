@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Backgroundchange from "./components/Backgroundchange";
+import Imageview from "./components/Imageview";
+import Tabs from "./components/Tabs";
+import Toggle from "./components/Toggle";
+import Mainpage from "./pages/Mainpage";
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Mainpage/>
+   <Routes>
+        <Route path="/backgroundchange" element ={<Backgroundchange/>} /> 
+        <Route path="/toggle" element ={<Toggle/>} /> 
+        <Route path="/imageview" element ={<Imageview/>} /> 
+        <Route path="/tabs" element ={<Tabs/>} /> 
+      </Routes>
+
+   </>
   );
 }
 
